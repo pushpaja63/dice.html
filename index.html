@@ -31,41 +31,51 @@
 
 	</style>
 	<script type="text/javascript">
-		
-		function rolldice(){
-			const player1=document.getElementById("player1")
+		function rolldice2(){
 			const player2=document.getElementById("player2")
 			var status=document.getElementById("status")
-
-			const dice1=Math.floor(Math.random()*6)+1;
 			const dice2=Math.floor(Math.random()*6)+1;
-
-			player1.innerHTML=dice1;
 			player2.innerHTML=dice2;
 
-			if(dice1==dice2){
-				status.innerHTML+='Game is Draw!'
+		
+		}
+		
+		function rolldice1(){
+			const player1=document.getElementById("player1")
+			var status=document.getElementById("status")
+			const dice1=Math.floor(Math.random()*6)+1;
+			player1.innerHTML=dice1;		
+		} 
+		/*let dice1,dice2
+		 function rolldice2(){
+		 	dice2=Math.floor(Math.random()*6)+1;
+		 	if(rolldice1==rolldice2){
+				status.innerHTML="Game is Draw!"
 			}
-			else if(dice1<dice2){
-				status.innerHTML+="player2 wins the Game."
+			else if(rolldice1<rolldice2){
+				status.innerHTML="player2 wins the Game."
 			}
 			else{
-				status.innerHTML+="player1 wins the Game."
-			}
-		}
+				status.innerHTML="player1 wins the Game."
+		 }*/
+		
+		
+
 	</script>
 </head>
 <body>
 	<div id="dice">
-		<div>
+		
 			<h1>Let's Play</h1>
+			<div>
 			<p >player1</p>
 			<p id="player1">score:0</p>
-			<p >player2</p>
-			<p id="player2">score0</p>
+			<button onclick="rolldice1()" id="dice1">RollDice</button>
 		</div>
 		<div>
-			<button onclick="rolldice()" id="dice1">RollDice</button>
+			<p >player2</p>
+			<p id="player2">score0</p>
+			<button onclick="rolldice2()" id="dice1">RollDice</button>
 			<h2 id="status"></h2>
 		</div>
 	</div>
