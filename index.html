@@ -31,36 +31,34 @@
 
 	</style>
 	<script type="text/javascript">
+		
+		let player1,player2
+		let dice1,dice2,status
+
 		function rolldice2(){
-			const player2=document.getElementById("player2")
-			var status=document.getElementById("status")
-			const dice2=Math.floor(Math.random()*6)+1;
+			player2=document.getElementById("player2")
+			dice2=Math.floor(Math.random()*6)+1;
 			player2.innerHTML=dice2;
 
-		
-		}
-		
-		function rolldice1(){
-			const player1=document.getElementById("player1")
-			var status=document.getElementById("status")
-			const dice1=Math.floor(Math.random()*6)+1;
-			player1.innerHTML=dice1;		
-		} 
-		/*let dice1,dice2
-		 function rolldice2(){
-		 	dice2=Math.floor(Math.random()*6)+1;
-		 	if(rolldice1==rolldice2){
+			if(dice1==dice2){
 				status.innerHTML="Game is Draw!"
 			}
-			else if(rolldice1<rolldice2){
+			else if(dice1<dice2){
 				status.innerHTML="player2 wins the Game."
 			}
 			else{
 				status.innerHTML="player1 wins the Game."
-		 }*/
-		
-		
+			}
 
+		}
+		
+		function rolldice1(){
+		    player1=document.getElementById("player1")
+			status=document.getElementById("status")
+			dice1=Math.floor(Math.random()*6)+1;
+			player1.innerHTML=dice1;		
+		} 
+		
 	</script>
 </head>
 <body>
